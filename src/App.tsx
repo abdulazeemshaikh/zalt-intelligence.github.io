@@ -80,7 +80,7 @@ function Navbar({ isScrolled, onOpenForm }: { isScrolled: boolean; onOpenForm: (
       >
         <a href="/" className="pl-4">
           <img
-            src={isScrolled ? "/89.png" : "/25.png"}
+            src={isScrolled ? `${import.meta.env.BASE_URL}89.png` : `${import.meta.env.BASE_URL}25.png`}
             alt="Zalt Logo"
             className="h-8 w-auto transition-opacity duration-300"
           />
@@ -519,7 +519,7 @@ export default function App() {
       <div className="relative w-full h-[110vh] overflow-hidden -mt-[80px]">
         {/* Hero Background Image */}
         <img
-          src="/demo-5.jpg"
+          src={`${import.meta.env.BASE_URL}demo-5.jpg`}
           alt="Hero Background"
           className="absolute inset-0 object-cover w-full h-full"
           referrerPolicy="no-referrer"
@@ -599,7 +599,7 @@ export default function App() {
                       border: '1px solid rgba(255, 255, 255, 0.2)' 
                     }}
                   >
-                    <img src="/25.png" alt="25" className="w-4 h-4 object-contain" />
+                    <img src={`${import.meta.env.BASE_URL}25.png`} alt="25" className="w-4 h-4 object-contain" />
                     <span className="text-sm">Say hi to Your Zalt</span>
                     <div className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse" />
                   </button>
@@ -1106,7 +1106,7 @@ export default function App() {
                 border: '1px solid rgba(255, 255, 255, 0.2)' 
               }}
             >
-              <img src="/25.png" alt="25" className="w-5 h-5 object-contain" />
+              <img src={`${import.meta.env.BASE_URL}25.png`} alt="25" className="w-5 h-5 object-contain" />
               <span>Notify me when Zalt launches</span>
               <div className="w-2 h-2 rounded-full bg-white/80 animate-pulse" />
             </button>
@@ -1316,7 +1316,7 @@ function AwaitingText() {
             </text>
           </svg>
           <img 
-            src="/12.png" 
+            src={`${import.meta.env.BASE_URL}12.png`} 
             alt="Logo" 
             className="h-[clamp(100px,25vw,500px)] w-auto object-contain mx-12 mb-[0.05em]" 
             referrerPolicy="no-referrer"
