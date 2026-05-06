@@ -479,7 +479,7 @@ export const InputArea = forwardRef<InputAreaHandle, InputAreaProps>((props, ref
               border: '1px solid rgba(255, 255, 255, 0.2)' 
             }}
           >
-            <img src="/25.png" alt="25" className="w-6 h-6 object-contain" />
+            <img src="25.png" alt="25" className="w-6 h-6 object-contain" />
           </button>
 
           <input

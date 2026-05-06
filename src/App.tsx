@@ -78,9 +78,9 @@ function Navbar({ isScrolled, onOpenForm }: { isScrolled: boolean; onOpenForm: (
       <div
         className={`flex gap-3 lg:gap-4 items-center w-full max-w-6xl mx-auto justify-between transition-all duration-500 py-2.5`}
       >
-        <a href="/" className="pl-4">
+        <a href="./" className="pl-4">
           <img
-            src={isScrolled ? "/89.png" : "/25.png"}
+            src={isScrolled ? "89.png" : "25.png"}
             alt="Zalt Logo"
             className="h-8 w-auto transition-opacity duration-300"
           />
@@ -547,7 +547,7 @@ export default function App() {
       <div className="relative w-full h-[110vh] overflow-hidden -mt-[80px]">
         {/* Hero Background Image */}
         <img
-          src="/demo-5.jpg"
+          src="demo-5.jpg"
           alt="Hero Background"
           className="absolute inset-0 object-cover w-full h-full"
           referrerPolicy="no-referrer"
@@ -627,7 +627,7 @@ export default function App() {
                       border: '1px solid rgba(255, 255, 255, 0.2)' 
                     }}
                   >
-                    <img src="/25.png" alt="25" className="w-4 h-4 object-contain" />
+                    <img src="25.png" alt="25" className="w-4 h-4 object-contain" />
                     <span className="text-sm">Say hi to Your Zalt</span>
                     <div className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse" />
                   </button>
