@@ -1134,7 +1134,7 @@ export default function App() {
                 border: '1px solid rgba(255, 255, 255, 0.2)' 
               }}
             >
-              <img src="/25.png" alt="25" className="w-5 h-5 object-contain" />
+              <img src="25.png" alt="25" className="w-5 h-5 object-contain" />
               <span>Notify me when Zalt launches</span>
               <div className="w-2 h-2 rounded-full bg-white/80 animate-pulse" />
             </button>
@@ -1344,7 +1344,7 @@ function AwaitingText() {
             </text>
           </svg>
           <img 
-            src="/12.png" 
+            src="12.png" 
             alt="Logo" 
             className="h-[clamp(100px,25vw,500px)] w-auto object-contain mx-12 mb-[0.05em]" 
             referrerPolicy="no-referrer"
