@@ -492,7 +492,7 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName) {
       setError("Full Name is required.");
@@ -508,8 +508,36 @@ export default function App() {
       return;
     }
     setError("");
-    console.log("Form data:", formData);
-    setIsSubmitted(true);
+
+    // --- Formspree Integration ---
+    // Replace 'YOUR_FORMSPREE_ID' with your actual Formspree ID (e.g., 'xoqrpzbn')
+    const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; 
+    const endpoint = `https://formspree.io/f/${FORMSPREE_ID}`;
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          whatsapp: `${formData.whatsappCountryCode} ${formData.whatsappNumber}`,
+          phone: `${formData.phoneCountryCode} ${formData.phoneNumber}`,
+          social: formData.socialLinks,
+          _subject: `New Waitlist Signup: ${formData.fullName}`
+        })
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or contact us directly.");
+      }
+    } catch (err) {
+      setError("Failed to send. Please check your internet connection.");
+    }
   };
 
   return (
