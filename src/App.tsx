@@ -565,6 +565,15 @@ export default function App() {
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col items-center text-center space-y-8 max-w-5xl"
             >
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.1 }}
+                className="px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-[10px] md:text-xs font-medium tracking-widest uppercase text-white/90 flex items-center gap-2 mb-2"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                V1.0 Early Access Now Open
+              </motion.div>
               <motion.h2
                 initial={{ opacity: 0, y: -40 }}
                 animate={{ opacity: 1, y: 0 }}
